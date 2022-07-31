@@ -5,11 +5,13 @@ import com.example.springtransactional.model.OrderModel;
 import com.example.springtransactional.repository.OrderRepository;
 import com.example.springtransactional.service.OrderService;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class OrderServiceImpl implements OrderService {
 
+    @Autowired
     private OrderRepository orderRepository;
 
     @Override
