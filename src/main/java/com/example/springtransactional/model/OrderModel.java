@@ -26,7 +26,7 @@ public class OrderModel implements Serializable {
 
     private Long number;
 
-    private LocalDate dataOrder;
+    private LocalDate dateOrder;
 
     @Column(name = "value", precision = 10, scale = 2)
     private BigDecimal value;

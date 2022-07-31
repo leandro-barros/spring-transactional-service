@@ -15,7 +15,7 @@ public class OrderDto {
 
     private Long number;
 
-    private LocalDate dataOrder;
+    private LocalDate dateOrder;
 
     private BigDecimal value;
 
