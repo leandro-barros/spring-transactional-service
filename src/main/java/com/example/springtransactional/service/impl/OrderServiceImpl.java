@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.UUID;
+
 @Service
 public class OrderServiceImpl implements OrderService {
 
@@ -29,4 +31,10 @@ public class OrderServiceImpl implements OrderService {
         return orderDto;
     }
 
+    @Transactional(readOnly = true)
+    @Override
+    public OrderModel findById(UUID id) {
+        OrderModel orderModel = orderRepository.findById(id).orElse(null);
+        return orderModel;
+    }
 }
