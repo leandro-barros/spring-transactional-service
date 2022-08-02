@@ -11,4 +11,6 @@ public interface OrderService {
 
     OrderModel findById(UUID id);
 
+    void updateOrderTrasactionWithRollback(UUID id, OrderDto orderDto);
+
 }

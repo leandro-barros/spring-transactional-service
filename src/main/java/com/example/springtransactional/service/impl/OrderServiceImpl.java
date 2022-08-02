@@ -37,4 +37,11 @@ public class OrderServiceImpl implements OrderService {
         OrderModel orderModel = orderRepository.findById(id).orElse(null);
         return orderModel;
     }
+
+    @Override
+    public void updateOrderTrasactionWithRollback(UUID id, OrderDto orderDto) {
+        OrderModel orderModel = orderRepository.findById(id);
+        orderModel.setValue(orderDto.getValue());
+        orderRepository.save(orderModel);
+    }
 }
