@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public interface OrderService {
 
-    public OrderDto save(OrderDto orderDto);
+    public OrderDto saveOrderTransactional(OrderDto orderDto);
 
     OrderModel findById(UUID id);
 

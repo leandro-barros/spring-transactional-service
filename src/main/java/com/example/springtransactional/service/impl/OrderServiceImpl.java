@@ -20,7 +20,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
     @Override
-    public OrderDto save(OrderDto orderDto) {
+    public OrderDto saveOrderTransactional(OrderDto orderDto) {
         var orderModel = new OrderModel();
         BeanUtils.copyProperties(orderDto, orderModel);
         orderRepository.save(orderModel);

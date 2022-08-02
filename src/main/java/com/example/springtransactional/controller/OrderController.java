@@ -17,7 +17,7 @@ public class OrderController {
     private OrderService orderService;
 
     @PostMapping
-    public ResponseEntity<OrderDto> save(@RequestBody OrderDto orderDto) {
+    public ResponseEntity<OrderDto> saveOrderTransactional(@RequestBody OrderDto orderDto) {
         return ResponseEntity.ok().body(orderService.save(orderDto));
     }
 
