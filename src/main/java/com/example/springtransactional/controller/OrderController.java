@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @RequestMapping("v1/orders")
@@ -29,6 +30,11 @@ public class OrderController {
     @PutMapping("/{id}")
     public void updateOrderTrasactionWithRollback(@PathVariable UUID id, @RequestBody OrderDto orderDto) throws Exception {
         orderService.updateOrderTrasactionWithRollback(id, orderDto);
+    }
+
+    @PutMapping("/value/{id}")
+    public void updateValueOrderTrasactionPreventRollback(@PathVariable UUID id, @RequestBody BigDecimal value) throws Exception {
+        orderService.updateValueOrderTrasactionPreventRollback(id, value);
     }
 
 }
