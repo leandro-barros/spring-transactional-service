@@ -38,11 +38,15 @@ public class OrderServiceImpl implements OrderService {
         return orderModel;
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
-    public void updateOrderTrasactionWithRollback(UUID id, OrderDto orderDto) {
+    public void updateOrderTrasactionWithRollback(UUID id, OrderDto orderDto) throws Exception {
         OrderModel orderModel = orderRepository.findById(id).get();
         orderModel.setValue(orderDto.getValue());
-        orderModel,setDateOrder(orderDto.getDateOrder());
+        orderModel.setDateOrder(orderDto.getDateOrder());
         orderRepository.save(orderModel);
+        if (true) {
+            throw new Exception();
+        }
     }
 }

@@ -11,6 +11,6 @@ public interface OrderService {
 
     OrderModel findById(UUID id);
 
-    void updateOrderTrasactionWithRollback(UUID id, OrderDto orderDto);
+    void updateOrderTrasactionWithRollback(UUID id, OrderDto orderDto) throws Exception;
 
 }

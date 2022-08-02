@@ -27,7 +27,7 @@ public class OrderController {
     }
 
     @PutMapping("/{id}")
-    public void updateOrderTrasactionWithRollback(@PathVariable UUID id, @RequestBody OrderDto orderDto) {
+    public void updateOrderTrasactionWithRollback(@PathVariable UUID id, @RequestBody OrderDto orderDto) throws Exception {
         orderService.updateOrderTrasactionWithRollback(id, orderDto);
     }
 
