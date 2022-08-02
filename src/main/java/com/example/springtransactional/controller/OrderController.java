@@ -18,12 +18,17 @@ public class OrderController {
 
     @PostMapping
     public ResponseEntity<OrderDto> saveOrderTransactional(@RequestBody OrderDto orderDto) {
-        return ResponseEntity.ok().body(orderService.save(orderDto));
+        return ResponseEntity.ok().body(orderService.saveOrderTransactional(orderDto));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<OrderModel> findById(@PathVariable UUID id) {
        return ResponseEntity.ok().body(orderService.findById(id));
+    }
+
+    @PutMapping("/{id}")
+    public void updateOrderTrasactionWithRollback(@PathVariable UUID id, @RequestBody OrderDto orderDto) {
+        orderService.updateOrderTrasactionWithRollback(id, orderDto);
     }
 
 }

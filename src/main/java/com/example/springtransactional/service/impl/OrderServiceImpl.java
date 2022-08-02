@@ -40,8 +40,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void updateOrderTrasactionWithRollback(UUID id, OrderDto orderDto) {
-        OrderModel orderModel = orderRepository.findById(id);
+        OrderModel orderModel = orderRepository.findById(id).get();
         orderModel.setValue(orderDto.getValue());
+        orderModel,setDateOrder(orderDto.getDateOrder());
         orderRepository.save(orderModel);
     }
 }
