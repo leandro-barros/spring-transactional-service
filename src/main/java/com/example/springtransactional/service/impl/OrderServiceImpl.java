@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityNotFoundException;
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Service
@@ -38,7 +40,7 @@ public class OrderServiceImpl implements OrderService {
         return orderModel;
     }
 
-    @Transactional(rollbackFor = Exception.class)
+    @Transactional(rollbackFor = EntityNotFoundException.class)
     @Override
     public void updateOrderTrasactionWithRollback(UUID id, OrderDto orderDto) throws Exception {
         OrderModel orderModel = orderRepository.findById(id).get();
@@ -48,5 +50,10 @@ public class OrderServiceImpl implements OrderService {
         if (true) {
             throw new Exception();
         }
+    }
+
+    @Override
+    public void updateValueOrderTrasactionPreventRollback(UUID id, BigDecimal value) throws Exception {
+
     }
 }
