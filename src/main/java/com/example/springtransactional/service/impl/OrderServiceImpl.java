@@ -52,6 +52,7 @@ public class OrderServiceImpl implements OrderService {
         }
     }
 
+    @Transactional(rollbackFor = Exception.class, noRollbackFor = EntityNotFoundException.class)
     @Override
     public void updateValueOrderTrasactionPreventRollback(UUID id, BigDecimal value) throws Exception {
         OrderModel orderModel = orderRepository.findById(id).get();
