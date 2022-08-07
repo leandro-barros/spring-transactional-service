@@ -24,7 +24,7 @@
 </h4>
 
 <p align="center">
- <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-sobre-o-projeto">Sobre o Projeto</a> •
  <a href="#-executar-o-projeto">Executar Projeto</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-autor">Autor</a> • 
@@ -79,7 +79,6 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Spring MVC](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html)
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
-- [Spring AMQP](https://spring.io/projects/spring-amqp)
 - [MySQL](https://www.mysql.com/downloads/)
 - [Maven](https://maven.apache.org/)
 - [Docker](https://docs.docker.com/get-docker/)
