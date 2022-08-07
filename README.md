@@ -23,6 +23,14 @@
 	🚧  Spring Trasactional ♻️ Concluído 🚀 🚧
 </h4>
 
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-executar-o-projeto">Executar Projeto</a> • 
+ <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-autor">Autor</a> • 
+ <a href="#user-content--licença">Licença</a>
+</p>
+
 ## 💻 Sobre o projeto
 
 Projeto desenvolvido para praticar conhecimento adquirido sobre transações no Spring para tornar aplicações seguras e sem inconsistências. 
@@ -35,9 +43,9 @@ O conceito de transação pode ser descrito com a sigla ACID:
 
 Utilizando a anotação @Transactional foi possível abordar algumas de suas propriedades: propagation, noRollbackFor, rollbackFor e readOnly.
 
-## 🚀 Executando o projeto
+## 🚀 Executar o projeto
 
-Este projeto é uma API RestFull desenvolvida com Spring Boot, possuindo endpoints expostos para efetuar requisições.
+Este projeto é uma API RESTful desenvolvida com Spring Boot, possuindo endpoints expostos para efetuar requisições.
 
 ### Pré-requisitos
 
@@ -77,7 +85,7 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
-## 💪 Autor
+## 👨‍💻 Autor
 
 <a href="https://www.linkedin.com/in/leandroebarros/">
   <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/13985064?v=4" width="100px;" alt=""/>
