@@ -43,6 +43,8 @@ O conceito de transação pode ser descrito com a sigla ACID:
 
 Utilizando a anotação @Transactional foi possível abordar algumas de suas propriedades: propagation, noRollbackFor, rollbackFor e readOnly.
 
+O MySQL foi instalado através do Docker e utilizado com Spring Data JPA para efetuar o processo de conhecimento sobre transações.
+
 ## 🚀 Executar o projeto
 
 Este projeto é uma API RESTful desenvolvida com Spring Boot, possuindo endpoints expostos para efetuar requisições.
@@ -75,7 +77,6 @@ $ docker-compose up
 As seguintes ferramentas foram utilizadas na construção do projeto:
 
 - [Java 11](https://aws.amazon.com/pt/corretto/?filtered-posts.sort-by=item.additionalFields.createdDate&filtered-posts.sort-order=desc)
-- [RabbitMQ](https://www.rabbitmq.com/#getstarted)
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Spring MVC](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html)
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
